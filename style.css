@@ -31,8 +31,9 @@ html {
 
 .black-div {
   background-color: rgba(21, 21, 21, 1);
-  width: 450px;
-  min-width: 450px;
+  max-width: 450px;
+  min-width: 0px;
+  width: 100%;
   height: 800px;
 }
 
@@ -56,17 +57,21 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 64px;
 }
 
 .hero {
   position: relative;
+  max-width: 1440px;
 }
 
 .info-nextpage-button {
+  max-width: 1000px;
   position: absolute;
-  top: 190px;
-  right: 9.5%;
+  top: 20vh;
+  right: -32.4%;
   display: flex;
+  gap: 13.6vw;
   flex-direction: row;
 }
 
@@ -112,6 +117,16 @@ html {
   align-items: center;
 }
 
+.button-div:hover .location-text {
+  background-color: rgba(213, 150, 108, 1);
+  cursor: pointer;
+}
+
+.button-div:hover .next-page {
+  background-color: rgba(21, 21, 21, 1);
+  cursor: pointer;
+}
+
 .middle-div {
   max-width: 1110px;
   height: 1150px;
@@ -153,7 +168,8 @@ html {
 
 .middle-second {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .middle-column {
@@ -166,7 +182,7 @@ html {
   font-family: "Big Shoulders";
   font-weight: 900;
   font-size: 60px;
-  width: 350px;
+  max-width: 350px;
 }
 
 .second-black-div {
@@ -180,6 +196,7 @@ html {
   justify-content: center;
   color: white;
   gap: 32px;
+  padding: 50px;
 }
 
 .second-info-middle {
@@ -189,7 +206,51 @@ html {
   width: 350px;
 }
 
-.image-container {
+.image-container-one {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  max-width: 635px;
+  min-width: 343px;
+}
+
+.image-container-one img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.image-container-two {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  max-width: 635px;
+  min-width: 343px;
+}
+
+.image-container-two img {
+  width: 100%;
+  height: 720px;
+  object-fit: cover;
+}
+
+.image-container-three {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  max-width: 635px;
+  min-width: 343px;
+}
+
+.image-container-three img {
+  width: 100%;
+  height: 313px;
+  object-fit: cover;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -206,24 +267,141 @@ html {
 }
 
 .bottom-info {
-  width: 380px;
+  max-width: 430px;
+  width: 100%;
   height: 84px;
   align-self: center;
+}
+
+.next-pageimg {
+  max-width: 8px;
+  max-height: 24px;
 }
 
 .bottom-header {
   font-family: "Big Shoulders";
   font-weight: 900;
   font-size: 40px;
-  width: 350px;
+  max-width: 210px;
+  width: 100%;
 }
 
 .bottom-infos {
   display: flex;
   align-items: center;
+  max-width: 730px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .media-logos {
   display: flex;
   gap: 20px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.bottom-everything {
+  max-width: 1110px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1158px) {
+  .info-nextpage-button {
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .info-href {
+    align-self: flex-start;
+    gap: 28px;
+  }
+  .heading {
+    max-width: 334px;
+    font-size: 65px;
+    color: black;
+  }
+}
+
+.bottom-div {
+  height: 336px;
+  padding: 30px;
+}
+.bottom-everything {
+  gap: 38px;
+  justify-content: center;
+}
+.bottom-everything {
+  flex-wrap: wrap;
+}
+.bottom-infos {
+  gap: 38px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 675px) {
+  .root {
+    height: 2811px;
+  }
+  .middle-div {
+    padding: 16px;
+    height: auto;
+  }
+  .info-pictures {
+    flex-wrap: wrap;
+  }
+  .middle-second {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bottom-everything {
+    justify-content: flex-start;
+  }
+  .bottom-infos {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 541px) {
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    height: 800px;
+  }
+  .black-div {
+    display: none;
+  }
+  .info-nextpage-button {
+    left: 7vw;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .middle-column {
+    max-width: 343px;
+    gap: 10px;
+  }
+  .image-container-three {
+    max-width: 343px;
+  }
+  .second-black-div {
+    padding: 20px;
+    height: 293px;
+    gap: 0px;
+  }
+  .second-info-middle {
+    max-width: 343px;
+    padding: 15px;
+  }
+  .middle-div {
+    gap: 6px;
+  }
 }
